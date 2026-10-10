@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code or the trained models, please cite the thesis."
+title: "Reliable and Economical Aerodynamic Shape Optimization: Black-Box Gaussian-Process Bayesian Optimization with an Online-Selected Surrogate Prior"
+type: software
+authors:
+  - family-names: Haustraete
+    given-names: Jules
+license: MIT
+repository-code: "https://github.com/Jules-Haustraete/aero-shape-optimization-surrogate-prior"
+date-released: 2026-10-10
+keywords:
+  - aerodynamic shape optimization
+  - Bayesian optimization
+  - Gaussian process
+  - surrogate model
+  - multi-fidelity
+  - uncertainty quantification
+  - SU2
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Reliable and Economical Aerodynamic Shape Optimization: Black-Box Gaussian-Process Bayesian Optimization with an Online-Selected Surrogate Prior"
+  authors:
+    - family-names: Haustraete
+      given-names: Jules
+  institution:
+    name: "ETH Zurich"
+  year: 2026
+  notes: "Carried out at the Computer Vision Laboratory, EPFL"

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+
+# run outputs
+results/
+
+# training data: not redistributed, see README (only our own SU2 probe is shipped)
+data/*
+!data/su2_probe.parquet

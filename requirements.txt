@@ -1,0 +1,14 @@
+# Optimizer, zoo and mesher. The SU2 binary is external: see README / Dockerfile
+numpy
+scipy
+pandas
+pyarrow
+torch>=2.0
+scikit-learn
+botorch
+gpytorch
+neuralfoil>=0.3
+aerosandbox>=4.2
+# mesher for SU2 (also called through GMSH_BIN)
+gmsh==4.15.2
+gmshairfoil2d==0.2.33
