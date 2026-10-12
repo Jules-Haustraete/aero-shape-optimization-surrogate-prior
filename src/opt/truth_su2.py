@@ -306,7 +306,9 @@ def prep_local(cst22: np.ndarray, outdir: str, n: int = 160) -> float:
 # ── parse SU2 forces from history.csv ──────────────────────────────────
 def parse_forces(rundir: str, fast: bool = False) -> dict:
     p = Path(rundir) / "history.csv"
-    if not p.exists():
+    log = Path(rundir) / "su2.log"                        # a killed SU2 (disk full, preempted pod) leaves a truncated
+    done = log.exists() and "Exit Success" in log.read_text(errors="ignore")[-5000:]   # history: never a result
+    if not p.exists() or not done:
         return {"CD": None, "CL": None, "CMz": None, "rms": None, "physical": False, "cd_p2p": float("inf")}
     df = pd.read_csv(p)
     df.columns = [c.strip().strip('"').strip() for c in df.columns]
